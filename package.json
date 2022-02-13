@@ -1,0 +1,22 @@
+{
+  "name": "shabbir-test",
+  "private": true,
+  "scripts": {
+    "remove": "rm .env.local",
+    "dev": "npm run remove && npm run create_file && next dev",
+    "create_file": "echo \"NEXT_PUBLIC_USER_TOKEN=ABC\nHOST=http://127.0.0.1:3000\" >> .env.local",
+    "build": "npm run create_file &&  next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "next": "12.0.10",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "8.8.0",
+    "eslint-config-next": "12.0.10"
+  }
+}
